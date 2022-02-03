@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/../Lib/session.php');
+require_once(__DIR__ . '/../../app/Lib/session.php');
 
 session_start();
 $errors = errorsInit();
@@ -34,7 +34,6 @@ $mail = $_SESSION['formInputs']['mail'] ?? '';
         <p><input class='border-2 border-gray-300 w-full mb-5' placeholder="Password確認" type="password" name="confirmPassword"></p>
         <button class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mb-5 w-full' type="submit">アカウント作成</button>
       </form>
-      <a class="text-blue-600" href="./signin.php">ログイン画面へ</a>
     </div>
   </div>
 </body>

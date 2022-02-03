@@ -1,8 +1,8 @@
 <?php
-require_once(__DIR__ . '/../Lib/session.php');
-require_once(__DIR__ . '/../Lib/findUserByMail.php');
-require_once(__DIR__ . '/../Lib/createUser.php');
-require_once(__DIR__ . '/../Lib/redirect.php');
+require_once(__DIR__ . '/../../app/Lib/session.php');
+require_once(__DIR__ . '/../../app/Lib/findUserByMail.php');
+require_once(__DIR__ . '/../../app/Lib/createUser.php');
+require_once(__DIR__ . '/../../app/Lib/redirect.php');
 
 session_start();
 $mail = filter_input(INPUT_POST, 'mail');
