@@ -9,7 +9,7 @@
   <title>blog一覧</title>
 </head>
 
-<?php require_once(__DIR__ . '/utils/header.php'); ?>
+<?php require_once(__DIR__ . '/Lib/header.php'); ?>
 
 <body>
   <div class="blogs__wraper bg-green-300 py-20 px-20">

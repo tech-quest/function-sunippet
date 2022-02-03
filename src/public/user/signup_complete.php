@@ -1,8 +1,8 @@
 <?php
-require_once(__DIR__ . '/../utils/redirect.php');
-require_once(__DIR__ . '/../utils/findUserByMail.php');
-require_once(__DIR__ . '/../utils/createUser.php');
-require_once(__DIR__ . '/../utils/session.php');
+require_once(__DIR__ . '/../Lib/session.php');
+require_once(__DIR__ . '/../Lib/findUserByMail.php');
+require_once(__DIR__ . '/../Lib/createUser.php');
+require_once(__DIR__ . '/../Lib/redirect.php');
 
 session_start();
 $mail = filter_input(INPUT_POST, 'mail');
@@ -11,7 +11,7 @@ $password = filter_input(INPUT_POST, 'password');
 $confirmPassword = filter_input(INPUT_POST, 'confirmPassword');
 
 if (empty($password) || empty($confirmPassword)) appendError("パスワードを入力してください");
-if ($password !== $confirmPassword)  appendError("パスワードが一致しません");
+if ($password !== $confirmPassword) appendError("パスワードが一致しません");
 if (!empty($_SESSION['errors'])) {
   $_SESSION['formInputs']['mail'] = $mail;
   $_SESSION['formInputs']['userName'] = $userName;
